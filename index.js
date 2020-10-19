@@ -1,7 +1,13 @@
 const title = document.querySelector("#title");
 
+const BASE_COLOR = "#34495e";
+
 function handleClick() {
-  title.style.color = "blue";
+  console.log(title.style.color);
 }
 
-title.addEventListener("click", handleClick);
+function init() {
+  title.style.color = BASE_COLOR;
+  title.addEventListener("click", handleClick);
+}
+init();
