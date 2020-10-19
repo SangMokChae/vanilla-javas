@@ -1,5 +1,7 @@
-const title = document.getElementById("sori");
-sori.innerHTML = ("Hello Ruby!");
-sori.style.color = ("yellowgreen");
-sori.style.backgroundColor = ("blue");
-console.dir(title);
+const title = document.querySelector("#title");
+
+function handleClick() {
+  title.style.color = "blue";
+}
+
+title.addEventListener("click", handleClick);
