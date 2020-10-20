@@ -2,15 +2,19 @@ body {
   background-color: #ecf0f1;
 }
 
-.btn {
-  cursor: pointer;
-}
-
 h1 {
-  color: #4b7bec;
-  transition: color 0.5s ease-in-out;
+  color: #1c542a;
 }
 
 .clicked {
-  color: #4b6584;
+  color: #673ab7;
+}
+
+.form,
+.greetings {
+  display: none;
+}
+
+.showing {
+  display: block;
 }
