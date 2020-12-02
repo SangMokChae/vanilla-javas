@@ -6,6 +6,10 @@ const TODOS_LS = "toDos";
 
 let toDos = [];
 
+function saveToDos() {
+  localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
+}
+
 function deleteToDo(event) {
   const btn = event.target;
   const li = btn.parentNode;
@@ -17,9 +21,6 @@ function deleteToDo(event) {
   saveToDos();
 }
 
-function saveToDos() {
-  localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
-}
 
 function paintToDo(text) {
   const li = document.createElement("li");
