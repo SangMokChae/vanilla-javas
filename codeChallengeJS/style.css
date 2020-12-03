@@ -1,0 +1,210 @@
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;600;900&display=swap");
+
+body {
+  background-color: white;
+  font-family: "Sansita Swashed", cursive;
+  padding: 15px;
+}
+
+.form > input {
+  outline: none;
+  border: none;
+  font-size: 25px;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+@keyframes comeBg {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
+.bgImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.6;
+  animation: comeBg 0.7s linear;
+}
+
+/* 시계 */
+.clock,
+.form {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.clock > h1 {
+  color: rgb(252, 248, 59);
+  font-size: 60px;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgb(24, 224, 250), 0 0 1em rgb(201, 63, 235),
+    0 0 0.2em rgb(75, 0, 0);
+}
+
+/* 이름 */
+.hello {
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+  color: whitesmoke;
+  text-shadow: 2px 2px 5px rgba(80, 60, 150, 0.8), 3px 3px 0.5rem black,
+    0 0 1em blue;
+}
+
+/* 다이나믹 글씨 변환 */
+.dynamic__box {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.dynamic {
+  position: relative;
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 600;
+  color: green;
+  text-shadow: 1px 1px 2px tomato;
+}
+
+.dynamic::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 3px;
+  height: 100%;
+  background-color: white;
+}
+
+.dynamic.active::after {
+  display: none;
+}
+
+/* 달력 */
+.container {
+  display: none;
+  position: absolute;
+  top: 10px;
+}
+
+.clicked-date {
+  background-color: rgb(243, 243, 152);
+  border-radius: 25px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.cal-day,
+.cal-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 50px;
+  text-shadow: 1px 1px 1px white;
+}
+
+.cal-date {
+  color: brown;
+}
+
+.ctr-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.cal-table {
+  width: 100%;
+}
+
+.btn-cal {
+  background: none;
+  border: none;
+  font-size: 30px;
+  margin: 0 3px;
+}
+
+.calendar-box {
+  font-size: 30px;
+  width: 100%;
+  text-shadow: 1px 1px 1px white;
+}
+
+.day {
+  text-align: center;
+  text-justify: auto;
+}
+
+.cal-table td.today {
+  background: #55bbff;
+  border-radius: 50%;
+  color: #fff;
+}
+.cal-table td.day-active {
+  background: #fc7e7e;
+  border-radius: 50%;
+  color: #fff;
+}
+
+/* toDoList 내용 */
+.classboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 10px 0;
+}
+
+.askToDos {
+  padding: 15px;
+  border: none;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.25);
+  outline: none;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.askToDos::placeholder {
+  color: white;
+}
+
+.toDoList {
+  margin-top: 25px;
+  height: 60%;
+}
+
+.toDoList > li {
+  margin-top: 10px;
+}
+
+.toDoList > li > button {
+  margin-left: 8px;
+  border: none;
+  border-radius: 30px;
+  padding: 5px;
+  outline: none;
+}
+
+.toDoList > li > button:active {
+  transform: scale(0.98);
+}
+
+.midline {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
